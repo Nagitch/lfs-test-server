@@ -1,0 +1,11 @@
+version: "3"
+services:
+  lfs-test-server:
+    container_name: "lfs-test-server"
+    build: .
+    ports:
+      - "8080:8080"
+      - "1080:1080"
+    environment:
+      - LFS_ADMINUSER=${LFS_ADMINUSER- }
+      - LFS_ADMINPASS=${LFS_ADMINPASS- }
